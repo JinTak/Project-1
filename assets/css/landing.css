@@ -1,0 +1,72 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for background image */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: url(../images/main-background.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+}
+
+/* Styling for Main Text */
+.main {
+    width: 900px;
+    /* border: 2px solid pink; */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.main h1 {
+    /* border: 1px solid lime; */
+    color: #fff;
+    font-size: 110px;
+    font-family: 'Bungee', sans-serif;
+    text-shadow: 0 0 30px #7FDBFF;
+    margin-bottom: 100px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    
+}
+.main h2 {
+    color: #fff;
+    font-size: 70px;
+    font-family: 'Bungee', sans-serif;
+    text-shadow: 0 0 30px #7FDBFF;
+    margin-bottom: 100px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Animation Styling */
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1.3);
+    }
+}
+
+/* Styling for Play button */
+.main a {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Bungee', sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    border: 5px solid #7FDBFF;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in;
+    transition: all .4s ease;
+}
+a:hover {
+    box-shadow: 0 0 50px #fff;
+}
