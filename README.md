@@ -1,6 +1,6 @@
 # Project-1
 
-### Space Racer 2
+### Space Racer 2: Into the Void
 
 For my first project, I would like to make a clone of [Galaga](https://en.wikipedia.org/wiki/Galaga). 
 
