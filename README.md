@@ -1,6 +1,12 @@
 # Project-1
 
-WDI 6 Project 1
+## WDI 6 Project 1
+
+### Space Racer 2
+
+For my first project, I would like to make a clone of [Galaga](https://en.wikipedia.org/wiki/Galaga).
+
+
 
 [Wireframe](https://github.com/JinTak/Project-1/blob/master/Wireframe.jpg)
 
