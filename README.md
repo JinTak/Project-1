@@ -15,6 +15,8 @@ I would very much like to make an extension of my Week-2-Assesment assignment, w
 **Stretch Goals**
 - Enemies will shoot projectiles 
 - Enemies will fly down and attempt to hit the players
+- User will be able to choose game background
+- User will be able to choose game character
 
 [Wireframe](https://wireframepro.mockflow.com/view/Df2fb730c406af0ed6065636ccfa218b3)
 
