@@ -3,6 +3,7 @@
 ### Space Racer 2: Into the Void
 
 For my first project, I would like to make a clone of [Galaga](https://en.wikipedia.org/wiki/Galaga). 
+I would very much like to make an extension of my Week-2-Assesment assignment, which is called Space Racer. I would like to keep the same game pieces while changing the functionality of the game.
 
 **Basic Functionality**
 - Enemies will populate at the top of the page
