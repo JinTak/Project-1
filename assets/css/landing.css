@@ -30,7 +30,7 @@
     color: #fff;
     font-size: 110px;
     font-family: 'Bungee', sans-serif;
-    text-shadow: 0 0 30px #7FDBFF;
+    text-shadow: 0 0 30px rgb(8, 50, 189);
     margin-bottom: 100px;
     animation: fadeIn 1.5s ease-in-out forwards;
     
@@ -39,7 +39,7 @@
     color: #fff;
     font-size: 70px;
     font-family: 'Bungee', sans-serif;
-    text-shadow: 0 0 30px #7FDBFF;
+    text-shadow: 0 0 30px rgb(8, 50, 189);
     margin-bottom: 100px;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
