@@ -29,11 +29,6 @@
     background: orangered;
 }
 
-#blah {
-    height: 50vh;
-    width: 100%;
-    border: 2px solid pink;
-}
 
 #player1 {
     height: 100px;
@@ -52,11 +47,20 @@
     background: rgb(10, 253, 119);
 }
 
-.projectile {
+.projectileStyleForPLayer1 {
     height: 25px;
     width: 10px;
     position: absolute;
     bottom: 100px;
     left: 50px;
     background: red;
+}
+
+.projectileStyleForPlayer2 {
+    height: 25px;
+    width: 10px;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    background: blue;
 }

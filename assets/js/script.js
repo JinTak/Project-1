@@ -12,7 +12,8 @@ let player2 = {
     bottom: 0
 }
 
-let projectiles = [];
+let projectilesPlayer1 = [];
+let projectilesPlayer2 = [];
 
 document.addEventListener('keyup', function(e){
     // console.log((document.getElementById('player1').style.bottom));
@@ -94,22 +95,25 @@ document.addEventListener('keyup', function(e){
     }
     // Shooting for player1
     else if (e.keyCode === 71){
-        projectiles.push({
-            top: player1.left + 40,
-            bottom: player1.bottom - 100
+        projectilesPlayer1.push({
+            left: player1.left + 45,
+            bottom: player1.bottom + 100
         });
 
         console.log("Player 1: pew pew!");
-        console.log(projectiles);
+        // console.log(projectilesPlayer1);
         drawProjectiles();
 
     // Shooting for player2
     } else if (e.keyCode === 76){
-        
+        projectilesPlayer2.push({
+            right: player2.right + 45,
+            bottom: player2.bottom + 100
+        });
 
         console.log("Player 2: pew pew!");
-
-        // drawProjectiles();
+        console.log(projectilesPlayer2);
+        drawProjectiles();
     }
 
 });
@@ -128,12 +132,16 @@ function movePlayer(){
 }
 
 function drawProjectiles(){
-    document.getElementById('projectiles').innerHTML = "";
-    for(var i = 0; i < projectiles.length; i++){
-        document.getElementById('projectiles').innerHTML += "<div class='projectile' style='top:" + projectiles[i].top + "px;" + "bottom:" + projectiles[i].bottom + "px;" + "'></div>";        
+    document.getElementById('projectilesPlayer1').innerHTML = "";
+    for(var i = 0; i < projectilesPlayer1.length; i++){
+        document.getElementById('projectilesPlayer1').innerHTML += "<div class='projectileStyleForPLayer1' style='left:" + projectilesPlayer1[i].left + "px;" + "bottom:" + projectilesPlayer1[i].bottom + "px;" + "'></div>";        
+    }
+
+    document.getElementById('projectilesPlayer2').innerHTML = "";
+    for(var i = 0; i < projectilesPlayer2.length; i++){
+        document.getElementById('projectilesPlayer2').innerHTML += "<div class='projectileStyleForPlayer2' style='right:" + projectilesPlayer2[i].right + "px;" + "bottom:" + projectilesPlayer2[i].bottom + "px;" + "'></div>";        
     }
     
-    console.log(projectiles[0].top);
 }
 
 
