@@ -23,14 +23,12 @@
 
 }
 
-.asteroid {
+.asteroidBelt {
     height: 100px;
     width: 100px;
-    position: absolute;
-    
     background: orangered;
-    
 }
+
 #blah {
     height: 50vh;
     width: 100%;
@@ -40,7 +38,25 @@
 #player1 {
     height: 100px;
     width: 100px;
+    left: 0;
     bottom: 0;
     position: absolute;
     background: rgb(1, 175, 255);
+}
+#player2 {
+    height: 100px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgb(10, 253, 119);
+}
+
+.projectile {
+    height: 25px;
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: lime;
 }

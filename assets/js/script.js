@@ -7,7 +7,14 @@ let player1 = {
     bottom: 0
 }
 
-document.onkeyup = function(e){
+let player2 = {
+    right: 0,
+    bottom: 0
+}
+
+let projectiles = [];
+
+document.addEventListener('keyup', function(e){
     // console.log((document.getElementById('player1').style.bottom));
    
     // let positionStr = document.getElementById('player1').style.bottom;
@@ -46,6 +53,7 @@ document.onkeyup = function(e){
     //     }
     // }
     
+    // MOVEMENT for Player 1
     if(e.keyCode === 65){
         // console.log('left');
         player1.left = player1.left - 10;
@@ -63,14 +71,69 @@ document.onkeyup = function(e){
         // console.log('down');
         player1.bottom = player1.bottom - 10;
         movePlayer();
+    } 
+
+    // MOVEMENT for Player 2
+    else if(e.keyCode === 37){
+        // console.log('left');
+        player2.right = player2.right + 10;
+        movePlayer();
+    } else if (e.keyCode === 39){
+        // console.log('right');
+        player2.right = player2.right - 10;
+        movePlayer();
+    } else if (e.keyCode === 38){
+        // console.log('up');
+        player2.bottom = player2.bottom + 10;
+        movePlayer();
+    }
+    else if (e.keyCode === 40){
+        // console.log('down');
+        player2.bottom = player2.bottom - 10;
+        movePlayer();
+    }
+    // Shooting for player1
+    else if (e.keyCode === 71){
+        projectiles.push({
+            top: player1.left + 40,
+            bottom: player1.bottom - 100
+        });
+
+        console.log("Player 1: pew pew!");
+
+        // drawProjectiles();
+
+    // Shooting for player2
+    } else if (e.keyCode === 76){
+        
+
+        console.log("Player 2: pew pew!");
+
+        // drawProjectiles();
     }
 
-}
+});
 
 // Function to move the player left, right, up, and down.
 function movePlayer(){
-    let player = document.getElementById('player1');
-    player.style.left = player1.left + "px";
-    player.style.bottom = player1.bottom + "px";
+    let playerOne = document.getElementById('player1');
+    let playerTwo = document.getElementById('player2');
+    playerOne.style.left = player1.left + "px";
+    playerOne.style.bottom = player1.bottom + "px";
+
+    playerTwo.style.right = player2.right + "px";
+    playerTwo.style.bottom = player2.bottom + "px";
+
+
 }
+
+// function drawProjectiles(){
+//     for(let i = 0; i < projectiles.length; i++){
+//         let asteroidBelt = document.getElementById('asteroidBelt').innerHTML = "";
+//         asteroidBelt.innerHTML += "<div class='projectile'></div>";
+//     }
     
+// }
+
+
+
