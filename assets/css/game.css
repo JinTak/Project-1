@@ -1,7 +1,37 @@
-.enemy {
-    color: limegreen;
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-    color: lime;
+/* Styling for background image */
+.container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url(../images/game-background.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.asteroid {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: orangered;
+    
+}
+
+#spaceship {
+    height: 100px;
+    width: 100px;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    background: rgb(1, 175, 255);
 }
