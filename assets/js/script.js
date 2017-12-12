@@ -10,57 +10,60 @@ let player1 = {
 document.onkeyup = function(e){
     // console.log((document.getElementById('player1').style.bottom));
    
-    let positionStr = document.getElementById('player1').style.bottom;
-    console.log(positionStr);
+    // let positionStr = document.getElementById('player1').style.bottom;
     // let bottom = parseInt(positionStr.slice(0,positionStr.length - 2));
-
-    if(!positionStr === "") {
-        let bottom = parseInt(positionStr.slice(0,positionStr.length - 2));
-    } else {
-        bottom = 0;
-    }
-
-    console.log(bottom);
-
-    if(!bottom > 290) {
-        if(e.keyCode === 65){
-            // console.log('left');
-            player1.left = player1.left - 10;
-            movePlayer();
-        } else if (e.keyCode === 68){
-            // console.log('right');
-            player1.left = player1.left + 10;
-            movePlayer();
-        } else if (e.keyCode === 87){
-            // console.log('up');
-            player1.bottom = player1.bottom + 10;
-            movePlayer();
-        }
-        else if (e.keyCode === 83){
-            // console.log('down');
-            player1.bottom = player1.bottom - 10;
-            movePlayer();
-        }
-    }
     
-    // if(e.keyCode === 65){
-    //     // console.log('left');
-    //     player1.left = player1.left - 10;
-    //     movePlayer();
-    // } else if (e.keyCode === 68){
-    //     // console.log('right');
-    //     player1.left = player1.left + 10;
-    //     movePlayer();
-    // } else if (e.keyCode === 87){
-    //     // console.log('up');
-    //     player1.bottom = player1.bottom + 10;
-    //     movePlayer();
+    // console.log(positionStr);
+    // // let bottom = parseInt(positionStr.slice(0,positionStr.length - 2));
+
+    // if(!positionStr === "") {
+    //     let bottom = parseInt(positionStr.slice(0,positionStr.length - 2));
+    // } else {
+    //     bottom = 0;
     // }
-    // else if (e.keyCode === 83){
-    //     // console.log('down');
-    //     player1.bottom = player1.bottom - 10;
-    //     movePlayer();
+
+    // console.log(bottom);
+
+    // trying to prevent div from going higher than 50vh
+    // if(!bottom > 290) {
+    //     if(e.keyCode === 65){
+    //         // console.log('left');
+    //         player1.left = player1.left - 10;
+    //         movePlayer();
+    //     } else if (e.keyCode === 68){
+    //         // console.log('right');
+    //         player1.left = player1.left + 10;
+    //         movePlayer();
+    //     } else if (e.keyCode === 87){
+    //         // console.log('up');
+    //         player1.bottom = player1.bottom + 10;
+    //         movePlayer();
+    //     }
+    //     else if (e.keyCode === 83){
+    //         // console.log('down');
+    //         player1.bottom = player1.bottom - 10;
+    //         movePlayer();
+    //     }
     // }
+    
+    if(e.keyCode === 65){
+        // console.log('left');
+        player1.left = player1.left - 10;
+        movePlayer();
+    } else if (e.keyCode === 68){
+        // console.log('right');
+        player1.left = player1.left + 10;
+        movePlayer();
+    } else if (e.keyCode === 87){
+        // console.log('up');
+        player1.bottom = player1.bottom + 10;
+        movePlayer();
+    }
+    else if (e.keyCode === 83){
+        // console.log('down');
+        player1.bottom = player1.bottom - 10;
+        movePlayer();
+    }
 
 }
 

@@ -2,19 +2,19 @@
 
 ### Space Racer 2: Into the Void
 
-For my first project, I would like to make a clone of [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders). 
-I would very much like to make an extension of my Week-2-Assesment assignment, which is called Space Racer. I would like to keep the same game pieces while changing the functionality of the game. This project will be a shooter type game. You will be able to have two players, who will compete to kill more enemies. 
+For my first project, I would like to make a game similar to [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders). 
+I would very much like to make an extension of my Week-2-Assesment assignment, which is called Space Racer. I would like to keep the same game pieces while changing the functionality of the game. This project will be a shooter type game. You will be able to have two players, who will compete to destroy more asteroids. 
 
 **Basic Functionality**
-- Enemies will populate at the top of the page
+- Asteroids will populate at the top of the page
 - Player will be able to shoot projectile at the enemies
-- Enemies will disappear as they are hit
-- User will gain 100 points for every enemy kill
-- Game is over when all enemies are extinguished
+- Asteroids will disappear as they are hit
+- User will gain 1 Bitcoin for every asteroid destroyed
+- Game is over when all asteroids are extinguished
 
 **Stretch Goals**
-- Enemies will shoot projectiles 
-- Enemies will fly down and attempt to hit the players
+- Asteroids will shoot projectiles 
+- Asteroids will fly down and attempt to hit the players
 - User will be able to choose game background
 - User will be able to choose game character
 

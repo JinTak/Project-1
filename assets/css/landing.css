@@ -21,7 +21,7 @@
     width: 900px;
     /* border: 2px solid pink; */
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -59,18 +59,11 @@
 /* Styling for Play button */
 .numberOfPlayers {
     position: relative;
-    width: 450px;
+    width: 50%;
+    height: 100px;
     /* border: 1px solid pink; */
     margin: 0 auto;
-}
-
-#onePlayer {
-    position: absolute;
-    left: 0;
-}
-#twoPlayer {
-    position: absolute;
-    right: 0;
+    margin-bottom: 30px;
 }
 
 .numberOfPlayers a {
@@ -86,5 +79,39 @@
     
 }
 a:hover {
+    box-shadow: 0 0 50px #fff;
+}
+
+#onePlayer {
+    position: absolute;
+    left: 0;
+}
+#twoPlayer {
+    position: absolute;
+    right: 0;
+}
+
+
+#instructions {
+    width: 100%;
+    margin: 0 auto;
+    /* border: 1px solid lime; */
+}
+
+#instructions button {
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    font-size: 20px;
+    font-family: 'Bungee', sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    border: 5px solid rgb(0, 112, 153);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease;
+}
+
+button:hover {
     box-shadow: 0 0 50px #fff;
 }
