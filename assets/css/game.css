@@ -1,3 +1,9 @@
+/* 
+    Author: Jin Tak
+    WDI 6: Project 1
+    Game Page 
+*/
+
 /* Global Styling */
 * {
     margin: 0;
@@ -21,17 +27,20 @@
     height: 100px;
     width: 100px;
     position: absolute;
-    top: 0;
-    left: 50%;
+    
     background: orangered;
     
 }
+#blah {
+    height: 50vh;
+    width: 100%;
+    border: 2px solid pink;
+}
 
-#spaceship {
+#player1 {
     height: 100px;
     width: 100px;
     bottom: 0;
-    left: 50%;
     position: absolute;
     background: rgb(1, 175, 255);
 }
