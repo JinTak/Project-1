@@ -9,7 +9,8 @@
 .container {
     height: 100vh;
     width: 100%;
-    background: url(../images/main-background.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url(../images/main-background.jpg) no-repeat center;
     background-size: cover;
     position: relative;
 
@@ -28,19 +29,19 @@
 .main h1 {
     /* border: 1px solid lime; */
     color: #fff;
-    font-size: 110px;
+    font-size: 100px;
     font-family: 'Bungee', sans-serif;
-    text-shadow: 0 0 30px rgb(8, 50, 189);
-    margin-bottom: 100px;
+    text-shadow: 0 0 25px rgb(0, 112, 153);
+    margin-bottom: 70px;
     animation: fadeIn 1.5s ease-in-out forwards;
     
 }
 .main h2 {
     color: #fff;
-    font-size: 70px;
+    font-size: 40px;
     font-family: 'Bungee', sans-serif;
-    text-shadow: 0 0 30px rgb(8, 50, 189);
-    margin-bottom: 100px;
+    text-shadow: 0 0 20px rgb(0, 112, 153);
+    margin-bottom: 75px;
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
@@ -56,16 +57,33 @@
 }
 
 /* Styling for Play button */
-.main a {
+.numberOfPlayers {
+    position: relative;
+    width: 450px;
+    /* border: 1px solid pink; */
+    margin: 0 auto;
+}
+
+#onePlayer {
+    position: absolute;
+    left: 0;
+}
+#twoPlayer {
+    position: absolute;
+    right: 0;
+}
+
+.numberOfPlayers a {
     color: #fff;
-    font-size: 30px;
+    background: rgba(0,0,0,.5);
+    font-size: 25px;
     font-family: 'Bungee', sans-serif;
     text-decoration: none;
     padding: 15px;
-    border: 5px solid #7FDBFF;
+    border: 5px solid rgb(0, 112, 153);
     border-radius: 10px;
-    animation: fadeIn 1s ease-in;
     transition: all .4s ease;
+    
 }
 a:hover {
     box-shadow: 0 0 50px #fff;
