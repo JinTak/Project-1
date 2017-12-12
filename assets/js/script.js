@@ -100,8 +100,8 @@ document.addEventListener('keyup', function(e){
         });
 
         console.log("Player 1: pew pew!");
-
-        // drawProjectiles();
+        console.log(projectiles);
+        drawProjectiles();
 
     // Shooting for player2
     } else if (e.keyCode === 76){
@@ -127,13 +127,14 @@ function movePlayer(){
 
 }
 
-// function drawProjectiles(){
-//     for(let i = 0; i < projectiles.length; i++){
-//         let asteroidBelt = document.getElementById('asteroidBelt').innerHTML = "";
-//         asteroidBelt.innerHTML += "<div class='projectile'></div>";
-//     }
+function drawProjectiles(){
+    document.getElementById('projectiles').innerHTML = "";
+    for(var i = 0; i < projectiles.length; i++){
+        document.getElementById('projectiles').innerHTML += "<div class='projectile' style='top:" + projectiles[i].top + "px;" + "bottom:" + projectiles[i].bottom + "px;" + "'></div>";        
+    }
     
-// }
+    console.log(projectiles[0].top);
+}
 
 
 
