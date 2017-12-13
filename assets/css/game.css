@@ -28,11 +28,51 @@
 #asteroidBelt {
     height: 100px;
     width: 100px;
-    background: url(../images/asteroid.png);
+    background: url(../images/people/jason.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: none; 
+    border-radius: 50%;
     position: absolute;
     
+}
+#asteroidBelt2 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 400px;
+    background: url(../images/people/zeb.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+#asteroidBelt3 {
+    height: 100px;
+    width: 100px;
+    top: 400px;
+    left: 200px;
+    background: url(../images/people/joe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+#asteroidBelt4 {
+    height: 100px;
+    width: 100px;
+    top: 50px;
+    left: 400px;
+    background: url(../images/people/ricky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
 }
 
 /* .asteroid {
