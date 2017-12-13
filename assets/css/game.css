@@ -28,11 +28,19 @@
 #asteroidBelt {
     height: 100px;
     width: 100px;
-    background: orangered;
+    background: url(../images/asteroid.png);
+    background-position: center;
+    background-repeat: none; 
     position: absolute;
-    top: 100px;
-    left: 100px;
+    
 }
+
+/* .asteroid {
+    position: absolute;
+    background: orangered;
+    height: 100px;
+    width: 100px;
+} */
 
 /* Styling for Game Pieces */
 #player1 {

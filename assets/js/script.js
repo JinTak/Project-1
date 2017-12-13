@@ -20,6 +20,15 @@ let player2 = {
 let projectilesArrayPlayer1 = [];
 // This array will hold the projectiles for Player 2
 let projectilesArrayPlayer2 = [];
+// This array will hold all of the asteroids
+let asteroidArray = [
+    {
+
+    },
+    {},
+    {},
+    {}
+];
 
 // This function will listen for specific 'keyup' events which will move the game pieces.
 document.addEventListener('keyup', function(e){
@@ -151,8 +160,9 @@ function movePlayer(){
 // This function is responsible for dynamically adding a projectile to the DOM with the correct absolute positioning values.
 function drawProjectiles(){
     document.getElementById('projectilesPlayer1').innerHTML = "";
-    var id = 0;
-    var pd = 0;
+    
+    var id = 0; // This variable is used to give each projectile for Player 1 its own id
+    var pd = 0; // This variable is used to give each projectile for Player 2 its own id
     for(var i = 0; i < projectilesArrayPlayer1.length; i++){
         document.getElementById('projectilesPlayer1').innerHTML += "<div id='" + id + "' class='projectileStyleForPlayer1' style='left:" + projectilesArrayPlayer1[i].left + "px;" + "bottom:" + projectilesArrayPlayer1[i].bottom + "px;" + "'></div>";   
         id++;     
@@ -168,7 +178,10 @@ function drawProjectiles(){
 
 // This function will be responsible running the moveProjectiles() function
 function updateProjectiles(){
-    setInterval(moveProjectiles, 15);
+    setTimeout(updateProjectiles, 20);
+    drawProjectiles();
+    moveProjectiles();
+    hitDetection();
 }
 
 // This function will be responsible for updating the coordinates of the projectiles  
@@ -178,13 +191,13 @@ function moveProjectiles(){
     for(let i = 0; i < projectilesArrayPlayer1.length; i++){
         
         projectilesArrayPlayer1[i].bottom += 10;
-        drawProjectiles();
+        // drawProjectiles();
         // console.log(typeof(projectilesArrayPlayer1[i].bottom));
     }
     
     for(let i = 0; i < projectilesArrayPlayer2.length; i++){
         projectilesArrayPlayer2[i].bottom += 10;
-        drawProjectiles();
+        // drawProjectiles();
         // console.log(projectilesArrayPlayer2[i].bottom);
     }
     
@@ -205,35 +218,40 @@ function moveProjectiles(){
                 projectilesArrayPlayer2.splice(index, 1);
             }
         }
-    }
-    
+    } 
+}
+
+function hitDetection() {
     let asteroid = document.getElementById('asteroidBelt');
-    let asteroidDOM = asteroid.getBoundingClientRect();
 
-    for(let x = 0; x < projectilesArrayPlayer1.length; x++){
-        let missile = document.getElementById(x);
-        let missileDOM = missile.getBoundingClientRect();
-
-        if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
-            console.log('PLayer 1 HIT!');
-            break;
-        }
-        // console.log(missileDOM);
-    }
-
-    for(let y = 0; y < projectilesArrayPlayer2.length; y++){
-        let missile = document.getElementById(y);
-        let missileDOM = missile.getBoundingClientRect();
-
-        if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
-            console.log('PLayer 2 HIT!');
-            break;
-        }
-        // console.log(missileDOM);
-    }
-
+    if(asteroid){
+        let asteroidDOM = asteroid.getBoundingClientRect();
+        for(let x = 0; x < projectilesArrayPlayer1.length; x++){
+            let missile = document.getElementById(x);
+            let missileDOM = missile.getBoundingClientRect();
     
+            if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                console.log('PLayer 1 HIT!');
+                asteroid.remove();
+                projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
+            }
+            // console.log(missileDOM);
+        }
     
+        for(let y = 0; y < projectilesArrayPlayer2.length; y++){
+            let missile = document.getElementById(y);
+            let missileDOM = missile.getBoundingClientRect();
+    
+            if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                console.log('PLayer 1 HIT!');
+                asteroid.remove();
+                projectilesArrayPlayer2.splice(projectilesArrayPlayer1[y], 1);
+            }
+            // console.log(missileDOM);
+        }
+    }
+    
+
     
 }
 
