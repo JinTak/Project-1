@@ -16,7 +16,7 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                 url(../images/game-background.jpg) no-repeat center;
     background-size: cover;
     position: relative;
@@ -27,6 +27,7 @@
     height: 100px;
     width: 100px;
     background: orangered;
+    position: absolute;
 }
 
 
@@ -53,9 +54,9 @@
     position: absolute;
     bottom: 100px;
     left: 50px;
-    background: rgb(255,255,255);
-    border: 2px solid rgb(0, 119, 255);
-    box-shadow: 0 0 4px rgb(255,255,255);
+    background: rgb(255, 34, 237);
+    box-shadow: 0 0 10px rgb(255, 34, 237);
+    border-radius: 5px;
 }
 
 .projectileStyleForPlayer2 {
@@ -64,7 +65,52 @@
     position: absolute;
     bottom: 100px;
     right: 50px;
-    background: rgb(255,255,255);
-    border: 2px solid rgb(60, 150, 12);
-    box-shadow: 0 0 4px rgb(255,255,255);
+    background: rgb(102, 255, 0);
+    box-shadow: 0 0 10px rgb(102, 255, 0);
+    border-radius: 5px;
+    
 }
+
+#projectilesPlayer1 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+#projectilesPlayer2 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+
+/* 
+.rainbow {
+    animation-duration: 1.5s;
+    animation-name: rainbow;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-timing-function: ease-inout;
+    animation-fill-mode: forwards;
+}
+@keyframes rainbow{
+    0% {
+        background: purple;
+
+    }
+    25% {
+        background: yellow;
+    }
+    50% {
+        background: aqua;
+    }
+    75% {
+        background: red;
+    }
+    100% {
+        background: white;
+        transform: scale(2) rotateY(360deg); 
+    }
+} */
+
+/* rgb(0, 195, 255) */

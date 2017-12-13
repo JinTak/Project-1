@@ -2,19 +2,27 @@
 // WDI 6: Project 1 
 // Game Page 
 
+
+// This Object holds properties which describe the position of Player 1
 let player1 = {
     left: 0,
     bottom: 0
 }
 
+// This Object holds properties which describe the position of Player 2
 let player2 = {
     right: 0,
     bottom: 0
 }
 
+// This array will hold the projectiles for Player 1
 let projectilesArrayPlayer1 = [];
+// This array will hold the projectiles for Player 2
 let projectilesArrayPlayer2 = [];
 
+
+
+// This function will listen for specific 'keyup' events which will move the game pieces.
 document.addEventListener('keyup', function(e){
     // console.log((document.getElementById('player1').style.bottom));
    
@@ -93,7 +101,8 @@ document.addEventListener('keyup', function(e){
         player2.bottom = player2.bottom - 10;
         movePlayer();
     }
-    // Shooting for player1
+    // Shooting for Player 1
+    // I am pushing a new projectile object onto an array each time the player 'shoots'
     else if (e.keyCode === 71){
         projectilesArrayPlayer1.push({
             left: player1.left + 45,
@@ -103,21 +112,19 @@ document.addEventListener('keyup', function(e){
         console.log("Player 1: pew pew!");
         console.log(projectilesArrayPlayer1);
         drawProjectiles();
-        
-
-    // Shooting for player2
-    } else if (e.keyCode === 76){
+    } 
+    // Shooting for Player 2
+    // I am pushing a new projectile object onto an array each time the player 'shoots'
+    else if (e.keyCode === 76){
         projectilesArrayPlayer2.push({
             right: player2.right + 45,
             bottom: player2.bottom + 100
         });
 
         console.log("Player 2: pew pew!");
-        // console.log(projectilesArrayPlayer2);
+        console.log(projectilesArrayPlayer2);
         drawProjectiles();
-        
     }
-
 });
 
 updateProjectiles();
@@ -135,6 +142,8 @@ function movePlayer(){
 
 }
 
+
+// This function is responsible for dynamically adding a projectile to the DOM with the correct absolute positioning values.
 function drawProjectiles(){
     document.getElementById('projectilesPlayer1').innerHTML = "";
     for(var i = 0; i < projectilesArrayPlayer1.length; i++){
@@ -150,26 +159,46 @@ function drawProjectiles(){
 
 // This function will be responsible running the moveProjectiles() function
 function updateProjectiles(){
-    
-    setInterval(moveProjectiles, 50);
-    
+    setInterval(moveProjectiles, 15);
 }
 
 // This function will be responsible for updating the coordinates of the projectiles  
 function moveProjectiles(){
     // console.log('game loop running....')
+    
     for(let i = 0; i < projectilesArrayPlayer1.length; i++){
+        
         projectilesArrayPlayer1[i].bottom += 10;
         drawProjectiles();
         // console.log(typeof(projectilesArrayPlayer1[i].bottom));
     }
-   
+    
     for(let i = 0; i < projectilesArrayPlayer2.length; i++){
         projectilesArrayPlayer2[i].bottom += 10;
         drawProjectiles();
         // console.log(projectilesArrayPlayer2[i].bottom);
     }
+    
 
+    // This 'for' loop will remove player 1's projectiles from its array once it has moved off the screen
+    for(let i = 0; i < projectilesArrayPlayer1.length; i++){
+        if(projectilesArrayPlayer1[i].bottom > 900){
+            let index  = projectilesArrayPlayer1.indexOf(projectilesArrayPlayer1[i]);
+            if(index != -1){
+                projectilesArrayPlayer1.splice(index, 1);
+            }
+        } 
+    }
+    // This 'for' loop will remove player 2's projectiles from its array once it has moved off the screen
+    for(let i = 0; i < projectilesArrayPlayer2.length; i++){
+        if(projectilesArrayPlayer2[i].bottom > 900){
+            let index  = projectilesArrayPlayer2.indexOf(projectilesArrayPlayer2[i]);
+            if(index != -1){
+                projectilesArrayPlayer2.splice(index, 1);
+            }
+        }
+    }
+    
     
     
 }
