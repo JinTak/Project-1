@@ -178,10 +178,11 @@ function drawProjectiles(){
 
 // This function will be responsible running the moveProjectiles() function
 function updateProjectiles(){
-    setTimeout(updateProjectiles, 20);
+    setTimeout(updateProjectiles, 15);
     drawProjectiles();
     moveProjectiles();
-    hitDetection();
+    // hitDetectionPeople();
+    hitDetectionAsteroids();
 }
 
 // This function will be responsible for updating the coordinates of the projectiles  
@@ -221,26 +222,54 @@ function moveProjectiles(){
     } 
 }
 
-function blah(){
-
+function hitDetectionAsteroids() {
+    let asteroids = document.getElementsByClassName('asteroid');
+    // console.log(asteroids);
+    for(var i = 0; i < asteroids.length; i++){
+        // if asteroid exists...
+        if(asteroids[i]){
+            let asteroidDOM = asteroids[i].getBoundingClientRect();
+            // console.log(asteroidDOM);
+            for(let x = 0; x < projectilesArrayPlayer1.length; x++){
+                let missile = document.getElementById(x);
+                let missileDOM = missile.getBoundingClientRect();
+        
+                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                    console.log('PLayer 1 HIT!');
+                    asteroids[i].remove();
+                    projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
+                }
+            }
+            for(let y = 0; y < projectilesArrayPlayer2.length; y++){
+                let missile = document.getElementById(y);
+                let missileDOM = missile.getBoundingClientRect();
+        
+                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                    console.log('PLayer 2 HIT!');
+                    asteroids[i].remove();
+                    projectilesArrayPlayer2.splice(projectilesArrayPlayer2[y], 1);
+                }
+            }
+        }
+    }
 }
 
-function hitDetection() {
-    let asteroid = document.getElementById('asteroidBelt');
-    let asteroid2 = document.getElementById('asteroidBelt2');
-    let asteroid3 = document.getElementById('asteroidBelt3');
-    let asteroid4 = document.getElementById('asteroidBelt4');
+function hitDetectionPeople(){
+    let asteroid1 = document.getElementById('asteroid_1');
+    let asteroid2 = document.getElementById('asteroid_2');
+    let asteroid3 = document.getElementById('asteroid_3');
+    let asteroid4 = document.getElementById('asteroid_4');
 
-    if(asteroid){
-        let asteroidDOM = asteroid.getBoundingClientRect();
+    if(asteroid1){
+        let asteroidDOM1 = asteroid1.getBoundingClientRect();
 
         for(let x = 0; x < projectilesArrayPlayer1.length; x++){
             let missile = document.getElementById(x);
             let missileDOM = missile.getBoundingClientRect();
     
-            if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+            if(missileDOM.bottom <= asteroidDOM1.bottom && missileDOM.right < asteroidDOM1.right && missileDOM.left > asteroidDOM1.left){
                 console.log('PLayer 1 HIT!');
-                asteroid.remove();
+                asteroid1.remove();
                 projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
             }
             // console.log(missileDOM);
