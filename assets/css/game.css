@@ -1,7 +1,8 @@
 /* 
-    Author: Jin Tak
-    WDI 6: Project 1
-    Game Page 
+    AUTHOR: Jin Tak 
+    TITLE: Space Racer 2: Into the Void
+    WDI 6: Project 1 
+    Game Page Styling 
 */
 
 /* Global Styling */
@@ -16,21 +17,24 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                 url(../images/game-background.jpg) no-repeat center;
     background-size: cover;
     position: relative;
 
 }
 
+/* Styling for asteroids */
 #asteroidBelt {
     height: 100px;
     width: 100px;
     background: orangered;
     position: absolute;
+    top: 100px;
+    left: 100px;
 }
 
-
+/* Styling for Game Pieces */
 #player1 {
     height: 100px;
     width: 100px;
@@ -48,29 +52,7 @@
     background: url(../images/ufo.svg);
 }
 
-.projectileStyleForPlayer1 {
-    height: 25px;
-    width: 10px;
-    position: absolute;
-    bottom: 100px;
-    left: 50px;
-    background: rgb(255, 34, 237);
-    box-shadow: 0 0 10px rgb(255, 34, 237);
-    border-radius: 5px;
-}
-
-.projectileStyleForPlayer2 {
-    height: 25px;
-    width: 10px;
-    position: absolute;
-    bottom: 100px;
-    right: 50px;
-    background: rgb(102, 255, 0);
-    box-shadow: 0 0 10px rgb(102, 255, 0);
-    border-radius: 5px;
-    
-}
-
+/* Styling for the div which will contain the projectiles */
 #projectilesPlayer1 {
     height: 100vh;
     width: 100%;
@@ -82,6 +64,39 @@
     width: 100%;
     position: absolute;
 }
+
+/* Styling for the projectiles  */
+.projectileStyleForPlayer1 {
+    height: 30px;
+    width: 10px;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    background: rgb(255, 34, 237);
+    box-shadow: 0 0 10px rgb(255, 34, 237);
+    border-radius: 5px;
+    /* background: url(../images/missile.png);
+    background-position: center;
+    background-repeat: none;
+    transform: rotate(90deg); */
+   
+}
+.projectileStyleForPlayer2 {
+    height: 30px;
+    width: 10px;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    background: rgb(102, 255, 0);
+    box-shadow: 0 0 10px rgb(102, 255, 0);
+    border-radius: 5px;
+    /* background: url(../images/missile.png);
+    background-position: center;
+    background-repeat: none;
+    transform: rotate(-90deg); */
+}
+
+
 
 
 /* 
