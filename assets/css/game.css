@@ -36,7 +36,7 @@
     left: 0;
     bottom: 0;
     position: absolute;
-    background: rgb(1, 175, 255);
+    background: url(../images/spaceship.svg);
 }
 #player2 {
     height: 100px;
@@ -44,16 +44,18 @@
     right: 0;
     bottom: 0;
     position: absolute;
-    background: rgb(10, 253, 119);
+    background: url(../images/ufo.svg);
 }
 
-.projectileStyleForPLayer1 {
+.projectileStyleForPlayer1 {
     height: 25px;
     width: 10px;
     position: absolute;
     bottom: 100px;
     left: 50px;
-    background: red;
+    background: rgb(255,255,255);
+    border: 2px solid rgb(0, 119, 255);
+    box-shadow: 0 0 4px rgb(255,255,255);
 }
 
 .projectileStyleForPlayer2 {
@@ -62,5 +64,7 @@
     position: absolute;
     bottom: 100px;
     right: 50px;
-    background: blue;
+    background: rgb(255,255,255);
+    border: 2px solid rgb(60, 150, 12);
+    box-shadow: 0 0 4px rgb(255,255,255);
 }

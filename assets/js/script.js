@@ -12,8 +12,8 @@ let player2 = {
     bottom: 0
 }
 
-let projectilesPlayer1 = [];
-let projectilesPlayer2 = [];
+let projectilesArrayPlayer1 = [];
+let projectilesArrayPlayer2 = [];
 
 document.addEventListener('keyup', function(e){
     // console.log((document.getElementById('player1').style.bottom));
@@ -95,28 +95,32 @@ document.addEventListener('keyup', function(e){
     }
     // Shooting for player1
     else if (e.keyCode === 71){
-        projectilesPlayer1.push({
+        projectilesArrayPlayer1.push({
             left: player1.left + 45,
             bottom: player1.bottom + 100
         });
 
         console.log("Player 1: pew pew!");
-        // console.log(projectilesPlayer1);
+        console.log(projectilesArrayPlayer1);
         drawProjectiles();
+        
 
     // Shooting for player2
     } else if (e.keyCode === 76){
-        projectilesPlayer2.push({
+        projectilesArrayPlayer2.push({
             right: player2.right + 45,
             bottom: player2.bottom + 100
         });
 
         console.log("Player 2: pew pew!");
-        console.log(projectilesPlayer2);
+        // console.log(projectilesArrayPlayer2);
         drawProjectiles();
+        
     }
 
 });
+
+updateProjectiles();
 
 // Function to move the player left, right, up, and down.
 function movePlayer(){
@@ -133,14 +137,40 @@ function movePlayer(){
 
 function drawProjectiles(){
     document.getElementById('projectilesPlayer1').innerHTML = "";
-    for(var i = 0; i < projectilesPlayer1.length; i++){
-        document.getElementById('projectilesPlayer1').innerHTML += "<div class='projectileStyleForPLayer1' style='left:" + projectilesPlayer1[i].left + "px;" + "bottom:" + projectilesPlayer1[i].bottom + "px;" + "'></div>";        
+    for(var i = 0; i < projectilesArrayPlayer1.length; i++){
+        document.getElementById('projectilesPlayer1').innerHTML += "<div class='projectileStyleForPlayer1' style='left:" + projectilesArrayPlayer1[i].left + "px;" + "bottom:" + projectilesArrayPlayer1[i].bottom + "px;" + "'></div>";        
     }
 
     document.getElementById('projectilesPlayer2').innerHTML = "";
-    for(var i = 0; i < projectilesPlayer2.length; i++){
-        document.getElementById('projectilesPlayer2').innerHTML += "<div class='projectileStyleForPlayer2' style='right:" + projectilesPlayer2[i].right + "px;" + "bottom:" + projectilesPlayer2[i].bottom + "px;" + "'></div>";        
+    for(var i = 0; i < projectilesArrayPlayer2.length; i++){
+        document.getElementById('projectilesPlayer2').innerHTML += "<div class='projectileStyleForPlayer2' style='right:" + projectilesArrayPlayer2[i].right + "px;" + "bottom:" + projectilesArrayPlayer2[i].bottom + "px;" + "'></div>";        
     }
+    
+}
+
+// This function will be responsible running the moveProjectiles() function
+function updateProjectiles(){
+    
+    setInterval(moveProjectiles, 50);
+    
+}
+
+// This function will be responsible for updating the coordinates of the projectiles  
+function moveProjectiles(){
+    // console.log('game loop running....')
+    for(let i = 0; i < projectilesArrayPlayer1.length; i++){
+        projectilesArrayPlayer1[i].bottom += 10;
+        drawProjectiles();
+        // console.log(typeof(projectilesArrayPlayer1[i].bottom));
+    }
+   
+    for(let i = 0; i < projectilesArrayPlayer2.length; i++){
+        projectilesArrayPlayer2[i].bottom += 10;
+        drawProjectiles();
+        // console.log(projectilesArrayPlayer2[i].bottom);
+    }
+
+    
     
 }
 
