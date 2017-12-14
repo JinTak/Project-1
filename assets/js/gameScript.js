@@ -20,15 +20,9 @@ let player2 = {
 let projectilesArrayPlayer1 = [];
 // This array will hold the projectiles for Player 2
 let projectilesArrayPlayer2 = [];
-// This array will hold all of the asteroids
-// let asteroidArray = [
-//     {
 
-//     },
-//     {},
-//     {},
-//     {}
-// ];
+let player1Score = 0;
+let player2Score = 0;
 
 // This function will listen for specific 'keyup' events which will move the game pieces.
 document.addEventListener('keyup', function(e){
@@ -151,6 +145,7 @@ function updateProjectiles(){
     moveProjectiles();
     hitDetectionPeople();
     hitDetectionAsteroids();
+
     // gameOver();
 }
 
@@ -226,6 +221,11 @@ function moveProjectiles(){
 
 function hitDetectionAsteroids() {
     let asteroids = document.getElementsByClassName('asteroid');
+    let player_1_Score = document.getElementById('player1ScoreHere');
+    let player_2_Score = document.getElementById('player2ScoreHere');
+    let bitcoinP1 = document.getElementById('bitcoinP1');
+    let bitcoinP2 = document.getElementById('bitcoinP2');
+
     // console.log(asteroids);
     for(var i = 0; i < asteroids.length; i++){
         // if asteroid exists...
@@ -239,9 +239,24 @@ function hitDetectionAsteroids() {
                 // I added +10 and -10 to the asteroid's right and left properties to account for the offset from the missile.
                 if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right + 10 && missileDOM.left > asteroidDOM.left - 10){
                     console.log('PLayer 1 HIT!');
+                    player1Score++;
+
+                    // Player score animation on successful hit
+                    player_1_Score.classList.add('scoreAnimation');
+                    setTimeout(function(){player_1_Score.classList.remove('scoreAnimation');}, 500);
+                    player_1_Score.innerHTML = player1Score;
+                    
+                    // animation to spin bitcoin image on successful hit
+                    bitcoinP1.classList.add('bitcoinSpin');
+                    setTimeout(function(){bitcoinP1.classList.remove('bitcoinSpin');}, 500);
+
+                    // asteroids[i].classList.add('blowUp');
+
                     asteroids[i].remove();
                     projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
                 }
+                
+                
             }
             for(let y = 0; y < projectilesArrayPlayer2.length; y++){
                 let missile = document.getElementById(y);
@@ -249,6 +264,19 @@ function hitDetectionAsteroids() {
         
                 if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right + 10  && missileDOM.left > asteroidDOM.left - 10){
                     console.log('PLayer 2 HIT!');
+                    player2Score++;
+
+                     // Player score animation on successful hit
+                    player_2_Score.classList.add('scoreAnimation');
+                    setTimeout(function(){player_2_Score.classList.remove('scoreAnimation');}, 1000);
+                    player_2_Score.innerHTML = player2Score;
+                   
+                    // animation to spin bitcoin image on successful hit
+                    bitcoinP2.classList.add('bitcoinSpin');
+                    setTimeout(function(){bitcoinP2.classList.remove('bitcoinSpin');}, 1000);
+
+                    // asteroids[i].classList.add('blowUp');
+
                     asteroids[i].remove();
                     projectilesArrayPlayer2.splice(projectilesArrayPlayer2[y], 1);
                 }
@@ -265,16 +293,6 @@ function gameOver() {
         alert('game over');
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -82,9 +82,9 @@
 
 /* Styling for Asteroids */
 .asteroid {
-    height: 55px;
-    width: 55px;
-    background: url(../images/asteroid.png);
+    height: 50px;
+    width: 50px;
+    background: url(../images/people/trump.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
@@ -151,4 +151,91 @@
     border-radius: 5px;
 }
 
+/* Styling for Score Keeper */
+#player1ScoreContainer{
+    /* height: 100px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: 'Bungee', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+#player2ScoreContainer{
+    /* height: 100px; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-family: 'Bungee', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
 
+#player1ScoreHere{
+    display: inline-block;
+    font-size: 30px;
+}
+
+#player2ScoreHere{
+    display: inline-block;
+    font-size: 30px;
+}
+
+.bitcoin {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+
+
+/* Animations */
+.scoreAnimation {
+    animation: scoreAnimation;
+    animation-duration: 1s;
+}
+
+.bitcoinSpin {
+    animation: bitcoinSpin;
+    animation-duration: 1s;
+}
+
+.blowUp {
+    animation: blowUp;
+    animation-duration: 1s;
+}
+
+@keyframes scoreAnimation {
+    0% {
+        transform: scale(1.5);
+    }
+    50% {
+        color: rgb(255, 251, 0);
+    }
+    100% {
+        transform: scale(1);
+        color: #fff;
+    }
+}
+
+@keyframes bitcoinSpin {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes blowUp {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
