@@ -33,6 +33,8 @@
 #asteroid_1{
     height: 100px;
     width: 100px;
+    top: 150px;
+    left: 150px;
     background: url(../images/people/jason.jpg);
     background-size: cover;
     background-position: center;
@@ -44,8 +46,8 @@
 #asteroid_2 {
     height: 100px;
     width: 100px;
-    top: 300px;
-    left: 400px;
+    top: 150px;
+    left: 300px;
     background: url(../images/people/zeb.jpg);
     background-size: cover;
     background-position: center;
@@ -57,8 +59,8 @@
 #asteroid_3 {
     height: 100px;
     width: 100px;
-    top: 400px;
-    left: 200px;
+    top: 150px;
+    left: 450px;
     background: url(../images/people/brian.jpg);
     background-size: cover;
     background-position: center;
@@ -70,9 +72,131 @@
 #asteroid_4 {
     height: 100px;
     width: 100px;
-    top: 50px;
-    left: 400px;
+    top: 150px;
+    left: 600px;
     background: url(../images/people/montrell.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+#asteroid_5 {
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    left: 750px;
+    background: url(../images/people/aaron.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+
+#asteroid_6 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 150px;
+    background: url(../images/people/chad.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_7 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 300px;
+    background: url(../images/people/nick.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_8 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 450px;
+    background: url(../images/people/kevin.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_9 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 600px;
+    background: url(../images/people/john.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_10 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 750px;
+    background: url(../images/people/josh.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_11 {
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    left: 900px;
+    background: url(../images/people/joe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_12 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 900px;
+    background: url(../images/people/ricky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_13 {
+    height: 100px;
+    width: 100px;
+    top: 150px;
+    left: 1050px;
+    background: url(../images/people/will.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+#asteroid_14 {
+    height: 100px;
+    width: 100px;
+    top: 300px;
+    left: 1050px;
+    background: url(../images/people/trump.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
@@ -84,7 +208,7 @@
 .asteroid {
     height: 50px;
     width: 50px;
-    background: url(../images/people/trump.jpg);
+    background: url(../images/asteroid.png);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
