@@ -24,6 +24,11 @@ let projectilesArrayPlayer2 = [];
 let player1Score = 0;
 let player2Score = 0;
 
+let player_1_Score = document.getElementById('player1ScoreHere');
+let player_2_Score = document.getElementById('player2ScoreHere');
+let bitcoinP1 = document.getElementById('bitcoinP1');
+let bitcoinP2 = document.getElementById('bitcoinP2');
+
 // This function will listen for specific 'keyup' events which will move the game pieces.
 document.addEventListener('keyup', function(e){
     // console.log((document.getElementById('player1').style.bottom));
@@ -143,8 +148,8 @@ function updateProjectiles(){
     setTimeout(updateProjectiles, 15);
     drawProjectiles();
     moveProjectiles();
-    hitDetectionPeople();
-    // hitDetectionAsteroids();
+    // hitDetectionPeople();
+    hitDetectionAsteroids();
 
     // gameOver();
 }
@@ -221,10 +226,6 @@ function moveProjectiles(){
 
 function hitDetectionAsteroids() {
     let asteroids = document.getElementsByClassName('asteroid');
-    let player_1_Score = document.getElementById('player1ScoreHere');
-    let player_2_Score = document.getElementById('player2ScoreHere');
-    let bitcoinP1 = document.getElementById('bitcoinP1');
-    let bitcoinP2 = document.getElementById('bitcoinP2');
 
     // console.log(asteroids);
     for(var i = 0; i < asteroids.length; i++){
