@@ -323,6 +323,30 @@
 }
 
 
+/* Winning Text Modal Styling */
+#winningModal {
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    display: none;
+}
+
+#winningModalContent {
+    width: 70vw;
+    margin: 15% auto;
+    color: lime;
+    text-shadow: 0 0 20px black;
+    font-family: 'Bungee', sans-serif;
+    font-size: 100px;
+    padding: 50px;
+    text-align: center;
+    border: 10px solid lime;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+
 
 /* Animations */
 .scoreAnimation {
@@ -338,6 +362,11 @@
 .blowUp {
     animation: blowUp;
     animation-duration: 1s;
+}
+
+.winning {
+    animation: winning;
+    animation-duration: 5s;
 }
 
 @keyframes scoreAnimation {
@@ -365,5 +394,32 @@
     }
     100% {
         transform: scale(0);
+    }
+}
+
+@keyframes winning {
+    0%{
+        border-color: red;
+        color: red;
+    }
+    25%{
+        border-color: yellow;
+        color: yellow;
+    }
+    35% {
+        border-color: orange;
+        color: orange;
+    }
+    50%{
+        border-color: blue;
+        color: blue;
+    }
+    75%{
+        border-color: lightblue;
+        color: lightblue;
+    }
+    100%{
+        border-color: lime;
+        color: lime;
     }
 }

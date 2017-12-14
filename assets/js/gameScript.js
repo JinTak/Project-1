@@ -302,20 +302,26 @@ function hitDetectionAsteroids() {
 // This function will check for the winner of the game once all asteroids are destroyed
 // ========================================================================================
 function checkForWinner() {
+    let winningModal = document.getElementById('winningModal');
+    let winningModalContent = document.getElementById('winningModalContent');
+
     let gameOver = false;
     let totalScore = player1Score + player2Score;
 
     if(totalScore === 32){
         if( player1Score === player2Score){
-            alert('TIE!');
             gameOver = true;
+            winningModalContent.innerHTML = "TIE!";
+            winningModal.style.display = "block";
             return gameOver;
         } else if (player1Score > player2Score){
-            alert('Spaceship Wins!');
             gameOver = true;
+            winningModalContent.innerHTML = "SPACESHIP WINS!";
+            winningModal.style.display = "block";
             return gameOver;
         } else {
-            alert('UFO Wins!');
+            winningModalContent.innerHTML = "UFO WINS!";
+            winningModal.style.display = "block";
             gameOver = true;
             return gameOver;
         }
@@ -323,7 +329,6 @@ function checkForWinner() {
 
     return gameOver;
 }
-
 
 
 // function hitDetectionPeople(){
