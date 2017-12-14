@@ -24,8 +24,7 @@
 
 }
 
-/* Styling for asteroids */
-
+/* Special Styling for Asteroids with Faces of People*/
 #asteroidContainer {
     height: 100vh;
     width: 100vw;
@@ -81,6 +80,7 @@
     position: absolute;
 }
 
+/* Styling for Asteroids */
 .asteroid {
     height: 50px;
     width: 50px;
@@ -91,12 +91,6 @@
     position: absolute;
 }
 
-/* .asteroid {
-    position: absolute;
-    background: orangered;
-    height: 100px;
-    width: 100px;
-} */
 
 /* Styling for Game Pieces */
 #player1 {

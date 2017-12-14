@@ -21,14 +21,14 @@ let projectilesArrayPlayer1 = [];
 // This array will hold the projectiles for Player 2
 let projectilesArrayPlayer2 = [];
 // This array will hold all of the asteroids
-let asteroidArray = [
-    {
+// let asteroidArray = [
+//     {
 
-    },
-    {},
-    {},
-    {}
-];
+//     },
+//     {},
+//     {},
+//     {}
+// ];
 
 // This function will listen for specific 'keyup' events which will move the game pieces.
 document.addEventListener('keyup', function(e){
@@ -144,6 +144,16 @@ updateProjectiles();
 // START OF FUNCTION DEFINITIONS
 // =====================================
 
+// This function will be responsible running the game loop 
+function updateProjectiles(){
+    setTimeout(updateProjectiles, 15);
+    drawProjectiles();
+    moveProjectiles();
+    // hitDetectionPeople();
+    hitDetectionAsteroids();
+    gameOver();
+}
+
 // Function to move the player left, right, up, and down.
 function movePlayer(){
     let playerOne = document.getElementById('player1');
@@ -176,14 +186,6 @@ function drawProjectiles(){
     
 }
 
-// This function will be responsible running the moveProjectiles() function
-function updateProjectiles(){
-    setTimeout(updateProjectiles, 15);
-    drawProjectiles();
-    moveProjectiles();
-    // hitDetectionPeople();
-    hitDetectionAsteroids();
-}
 
 // This function will be responsible for updating the coordinates of the projectiles  
 function moveProjectiles(){
@@ -253,6 +255,27 @@ function hitDetectionAsteroids() {
         }
     }
 }
+
+
+
+function gameOver() {
+    var asteroidsRemaining = document.getElementById('asteroidContainer');
+    if(asteroidsRemaining.children.length === 0){
+        alert('game over');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function hitDetectionPeople(){
     let asteroid1 = document.getElementById('asteroid_1');
