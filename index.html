@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Space Racer 2: Into the Void</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Russo+One" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
@@ -27,10 +27,23 @@
                 <a id="twoPlayer" href="game.html">2 Player</a>
             </div>
             <div id="instructions">
-                <button>Instructions</button>
+                <button id="modalBtn">Instructions</button>
             </div>
+        </div>
+
+        <!-- Modal for Instructions -->
+        <div id="instructionsModal" class="modal">
+                <div class="modalContent">
+                    <span id="closeBtn">&times;</span>    
+                    <h1>Objective: Destroy all asteroids to collect as many Bitcoins as possible</h1>
+                    <h2>Spaceship Controls</h2>
+                    <p>W A S D</p>
+                    <h2>UFO Controls</h2>
+                    <p>Arrows</p>
+                </div>
         </div>
     </div>
 
+    <script src="assets/js/landingScript.js"></script>
 </body>
 </html>

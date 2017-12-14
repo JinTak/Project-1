@@ -122,3 +122,56 @@ a:hover {
 button:hover {
     box-shadow: 0 0 50px #fff;
 }
+
+/* Styling for Instructions Modal */
+.modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    border-radius: 10px;
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+}
+
+.modalContent {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 12% auto;
+    height: 50vh;
+    width: 50vw;
+    padding: 20px;
+    border: 10px solid rgb(0, 112, 153);
+    box-shadow: 0 0 50px #fff;
+    border-radius: 15px;
+    animation: modalFadeIn;
+    animation-duration: 1s;
+}
+
+#closeBtn {
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+   
+}
+
+.closeBtn:hover {
+    color: rgb(0, 112, 153);
+}
+
+/* Animation to fade in the modal   */
+@keyframes modalFadeIn{
+    0% {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}

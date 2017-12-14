@@ -59,7 +59,7 @@
     width: 100px;
     top: 400px;
     left: 200px;
-    background: url(../images/people/joe.jpg);
+    background: url(../images/people/brian.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
@@ -72,7 +72,7 @@
     width: 100px;
     top: 50px;
     left: 400px;
-    background: url(../images/people/ricky.jpg);
+    background: url(../images/people/montrell.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
@@ -82,12 +82,13 @@
 
 /* Styling for Asteroids */
 .asteroid {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     background: url(../images/asteroid.png);
     background-size: cover;
     background-position: center;
     background-repeat: none; 
+    border-radius: 50%;
     position: absolute;
 }
 
@@ -130,8 +131,8 @@
     position: absolute;
     bottom: 100px;
     left: 50px;
-    background: rgb(255, 34, 237);
-    box-shadow: 0 0 10px rgb(255, 34, 237);
+    background: rgb(0, 162, 255);
+    box-shadow: 0 0 10px rgb(0, 162, 255);
     border-radius: 5px;
     /* background: url(../images/missile.png);
     background-position: center;
@@ -148,42 +149,6 @@
     background: rgb(102, 255, 0);
     box-shadow: 0 0 10px rgb(102, 255, 0);
     border-radius: 5px;
-    /* background: url(../images/missile.png);
-    background-position: center;
-    background-repeat: none;
-    transform: rotate(-90deg); */
 }
 
 
-
-
-/* 
-.rainbow {
-    animation-duration: 1.5s;
-    animation-name: rainbow;
-    animation-iteration-count: 1;
-    animation-direction: alternate;
-    animation-timing-function: ease-inout;
-    animation-fill-mode: forwards;
-}
-@keyframes rainbow{
-    0% {
-        background: purple;
-
-    }
-    25% {
-        background: yellow;
-    }
-    50% {
-        background: aqua;
-    }
-    75% {
-        background: red;
-    }
-    100% {
-        background: white;
-        transform: scale(2) rotateY(360deg); 
-    }
-} */
-
-/* rgb(0, 195, 255) */

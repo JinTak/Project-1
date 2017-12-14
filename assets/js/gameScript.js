@@ -149,9 +149,9 @@ function updateProjectiles(){
     setTimeout(updateProjectiles, 15);
     drawProjectiles();
     moveProjectiles();
-    // hitDetectionPeople();
+    hitDetectionPeople();
     hitDetectionAsteroids();
-    gameOver();
+    // gameOver();
 }
 
 // Function to move the player left, right, up, and down.
@@ -235,8 +235,9 @@ function hitDetectionAsteroids() {
             for(let x = 0; x < projectilesArrayPlayer1.length; x++){
                 let missile = document.getElementById(x);
                 let missileDOM = missile.getBoundingClientRect();
-        
-                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                
+                // I added +10 and -10 to the asteroid's right and left properties to account for the offset from the missile.
+                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right + 10 && missileDOM.left > asteroidDOM.left - 10){
                     console.log('PLayer 1 HIT!');
                     asteroids[i].remove();
                     projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
@@ -246,7 +247,7 @@ function hitDetectionAsteroids() {
                 let missile = document.getElementById(y);
                 let missileDOM = missile.getBoundingClientRect();
         
-                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right && missileDOM.left > asteroidDOM.left){
+                if(missileDOM.bottom <= asteroidDOM.bottom && missileDOM.right < asteroidDOM.right + 10  && missileDOM.left > asteroidDOM.left - 10){
                     console.log('PLayer 2 HIT!');
                     asteroids[i].remove();
                     projectilesArrayPlayer2.splice(projectilesArrayPlayer2[y], 1);
