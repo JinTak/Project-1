@@ -22,7 +22,8 @@ I essentially made an extension of my Week-2-Assesment assignment, which is call
 My game was constructed using HTML5, CSS3, and Javascript. No frameworks were used in this project.
 
 ### Biggest Obstacles
-Collision detection was the most difficult aspect of this game. 
+Collision detection was the most difficult aspect of this game. I used a built in Javascript function called, 
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
 
 ### Unsolved Problems
 - Still need to give movement to asteroids. 
