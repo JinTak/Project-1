@@ -388,6 +388,7 @@
     }
 }
 
+/* This animation is not working */
 @keyframes blowUp {
     0% {
         transform: scale(2);
