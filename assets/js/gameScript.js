@@ -113,6 +113,9 @@ document.addEventListener('keydown', function(e){
     // Shooting for Player 1
     // I am pushing a new projectile object onto an array each time the player 'shoots'
     else if (e.keyCode === 71){
+        // Play laser sound-1 when Player 1 shoots
+        laserSound();
+            
         projectilesArrayPlayer1.push({
             left: player1.left + 45,
             bottom: player1.bottom + 100
@@ -125,6 +128,9 @@ document.addEventListener('keydown', function(e){
     // Shooting for Player 2
     // I am pushing a new projectile object onto an array each time the player 'shoots'
     else if (e.keyCode === 76){
+        // Play laser sound-2 when Player 2 shoots
+        laserSound2();
+
         projectilesArrayPlayer2.push({
             right: player2.right + 45,
             bottom: player2.bottom + 100
@@ -380,6 +386,16 @@ function checkForWinnerPeople() {
     }
 
     return gameOver;
+}
+
+// ================================================================
+// These functions will play a laser sound when the players shoot
+// ================================================================
+function laserSound(){
+    document.getElementById("laserSound").play();
+}
+function laserSound2(){
+    document.getElementById("laserSound2").play();
 }
 
 
