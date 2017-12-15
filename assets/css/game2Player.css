@@ -18,7 +18,7 @@
     width: 100vw;
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url(../images/game-background.jpg) no-repeat center;
+                url(../images/fish.jpg) no-repeat center;
     background-size: cover;
     position: relative;
 
@@ -46,7 +46,8 @@
     right: 0;
     bottom: 0;
     position: absolute;
-    background: url(../images/ufo.svg);
+    background: url(../images/astronaut.png);
+    background-size: cover;
 }
 
 /* Styling for Asteroids */
