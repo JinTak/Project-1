@@ -18,7 +18,7 @@
     width: 100vw;
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url(../images/game-background.jpg) no-repeat center;
+                url(../images/space-background-1.jpg) no-repeat center;
     background-size: cover;
     position: relative;
 
@@ -256,8 +256,8 @@
     position: absolute;
     bottom: 100px;
     left: 50px;
-    background: rgb(0, 162, 255);
-    box-shadow: 0 0 10px rgb(0, 162, 255);
+    background: rgb(255, 0, 200);
+    box-shadow: 0 0 10px rgb(255, 0, 200);
     border-radius: 5px;
     /* background: url(../images/missile.png);
     background-position: center;
