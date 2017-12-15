@@ -152,8 +152,8 @@ function updateProjectiles(){
     drawProjectiles();
     moveProjectiles();
     // hitDetectionPeople();
-    hitDetectionAsteroids();
-
+    hitDetectionAsteroidsP1();
+    hitDetectionAsteroidsP2();
     let stopGame = checkForWinnerAsteroids();
     // let stopGame = checkForWinnerPeople();
     
@@ -237,9 +237,9 @@ function moveProjectiles(){
 }
 
 // ========================================================================================
-// This function will detect collisions between the projectiles and asteroids
+// This function will detect collisions between Player 1's projectiles and asteroids
 // ========================================================================================
-function hitDetectionAsteroids() {
+function hitDetectionAsteroidsP1() {
     let asteroids = document.getElementsByClassName('asteroid');
 
     // console.log(asteroids);
@@ -268,12 +268,28 @@ function hitDetectionAsteroids() {
 
                     // asteroids[i].classList.add('blowUp');
 
+                    // Removing asteroids once they are hit
                     asteroids[i].remove();
                     projectilesArrayPlayer1.splice(projectilesArrayPlayer1[x], 1);
-                }
-                
-                
+                }        
             }
+        }
+    }
+}
+
+// ========================================================================================
+// This function will detect collisions between Player 2's projectiles and asteroids
+// ========================================================================================
+function hitDetectionAsteroidsP2() {
+    let asteroids = document.getElementsByClassName('asteroid');
+
+    // console.log(asteroids);
+    for(var i = 0; i < asteroids.length; i++){
+        // if asteroid exists...
+        if(asteroids[i]){
+            let asteroidDOM = asteroids[i].getBoundingClientRect();
+            // console.log(asteroidDOM);
+            
             for(let y = 0; y < projectilesArrayPlayer2.length; y++){
                 let missile = document.getElementById(y);
                 let missileDOM = missile.getBoundingClientRect();
@@ -293,6 +309,7 @@ function hitDetectionAsteroids() {
 
                     // asteroids[i].classList.add('blowUp');
 
+                    // Removing asteroids once they are hit
                     asteroids[i].remove();
                     projectilesArrayPlayer2.splice(projectilesArrayPlayer2[y], 1);
                 }
