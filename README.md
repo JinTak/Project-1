@@ -1,6 +1,6 @@
 # Space Racer 2: Into the Void
 
-### Project 1 WDI 
+### Project-1 WDI6
 
 ![Instructions](assets/images/SpaceRacer2.jpg)
 ![Instructions](assets/images/Instructions.jpg)
