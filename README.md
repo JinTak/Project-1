@@ -22,8 +22,7 @@ I essentially made an extension of my Week-2-Assesment assignment, which is call
 My game was constructed using HTML5, CSS3, and Javascript. No frameworks were used in this project.
 
 ### Biggest Obstacles
-Collision detection was the most difficult aspect of this game. I used a built in Javascript function called, element.getBoundingRect(); 
-This method returns the size of an element and its position relative to the viewport. I used this method to calculate the positions of the projectiles and the asteroids. I used these positions to calculate the intersection of the two objects, which resulted in collision detection.  
+Collision detection was the most difficult aspect of this game. I used a built in Javascript function called, `element.getBoundingRect();`This method returns the size of an element and its position relative to the viewport. I used this method to calculate the positions of the projectiles and the asteroids. I used these positions to calculate the intersection of the two objects, which resulted in collision detection.  
 
 ### Unsolved Problems
 - Still need to give movement to asteroids. 
