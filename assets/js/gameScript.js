@@ -148,7 +148,7 @@ updateProjectiles();
 // ===========================================================
 function updateProjectiles(){
 
-    let stop = setTimeout(updateProjectiles, 15);
+    let stop = setTimeout(updateProjectiles, 30);
     drawProjectiles();
     moveProjectiles();
     // hitDetectionPeople();
