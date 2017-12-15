@@ -147,6 +147,18 @@ button:hover {
     border-radius: 15px;
     animation: modalFadeIn;
     animation-duration: 1s;
+    line-height: 30px;
+}
+
+.modalContent h1{
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+
+.modalContent h2{
+    font-family: 35px;
+    color: rgb(247, 0, 255);
 }
 
 #closeBtn {
@@ -176,9 +188,29 @@ button:hover {
     }
 }
 
+/* Text Color Classes */
+.yellow {
+    color: yellow;
+}
+.lime {
+    color: lime;
+}
+.blue {
+    color: rgb(0, 183, 255);
+}
 
+.left {
+    width: 40%;
+    height: 300px;
+    display: inline-block;
+    margin-right: 15%;
+}
 
-
+.right {
+    width: 40%;
+    height: 300px;
+    display: inline-block;
+}
 /* Media Queries */
 /* @media screen {
     

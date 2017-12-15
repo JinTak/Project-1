@@ -32,7 +32,7 @@ let bitcoinP1 = document.getElementById('bitcoinP1');
 let bitcoinP2 = document.getElementById('bitcoinP2');
 
 // This function will listen for specific 'keyup' events which will move the game pieces.
-document.addEventListener('keyup', function(e){
+document.addEventListener('keydown', function(e){
     // console.log((document.getElementById('player1').style.bottom));
    
     // let positionStr = document.getElementById('player1').style.bottom;
