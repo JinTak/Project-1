@@ -1,6 +1,8 @@
 # Project-1
 
 ### Space Racer 2: Into the Void
+![Instructions](assets/images/Instructions.jpg)
+![Instructions](assets/images/SpaceRacer2.jpg)
 
 For my first project, I wanted to make a game similar to [Space Invaders](https://en.wikipedia.org/wiki/Space_Invaders). 
 I essentially made an extension of my Week-2-Assesment assignment, which is called Space Racer. I would like to keep the same game pieces while changing the functionality of the game. This project will be a shooter type game. You will be able to have two players, who will compete to destroy more asteroids. 
