@@ -5,6 +5,7 @@
     Game Page Styling 
 */
 
+/* Video Background Styling */
 /* #myVideo {
     position: fixed;
     right: 0;
@@ -26,8 +27,8 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url(../images/game-background.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url(../images/space-background-1.jpg) no-repeat center;
     background-size: cover;
     position: relative;
 
