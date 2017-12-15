@@ -30,6 +30,38 @@
     width: 100vw;
     position: absolute;
 }
+
+/* Styling for Game Pieces */
+#player1 {
+    height: 100px;
+    width: 100px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: url(../images/spaceship.svg);
+}
+#player2 {
+    height: 100px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: url(../images/ufo.svg);
+    display: none;
+}
+
+/* Styling for Asteroids */
+.asteroid {
+    height: 50px;
+    width: 50px;
+    background: url(../images/asteroid.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none; 
+    border-radius: 50%;
+    position: absolute;
+}
+
 #asteroid_1{
     height: 100px;
     width: 100px;
@@ -204,37 +236,6 @@
     position: absolute;
 }
 
-/* Styling for Asteroids */
-.asteroid {
-    height: 50px;
-    width: 50px;
-    background: url(../images/asteroid.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: none; 
-    border-radius: 50%;
-    position: absolute;
-}
-
-
-/* Styling for Game Pieces */
-#player1 {
-    height: 100px;
-    width: 100px;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    background: url(../images/spaceship.svg);
-}
-#player2 {
-    height: 100px;
-    width: 100px;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    background: url(../images/ufo.svg);
-}
-
 /* Styling for the div which will contain the projectiles */
 #projectilesPlayer1 {
     height: 100vh;
@@ -289,7 +290,7 @@
     text-shadow: 0 2px 10px rgb(0, 162, 255);
 }
 #player2ScoreContainer{
-    /* height: 100px; */
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -334,15 +335,15 @@
 
 #winningModalContent {
     width: 70vw;
-    margin: 15% auto;
+    margin: 12% auto;
     color: lime;
     text-shadow: 0 0 20px black;
     font-family: 'Bungee', sans-serif;
     font-size: 100px;
     padding: 50px;
     text-align: center;
-    border: 10px solid lime;
-    background: rgba(255, 255, 255, 0.5);
+    /* border: 10px solid lime;
+    background: rgba(255, 255, 255, 0.5); */
     border-radius: 20px;
 }
 
@@ -413,6 +414,7 @@
     50%{
         border-color: blue;
         color: blue;
+        
     }
     75%{
         border-color: lightblue;

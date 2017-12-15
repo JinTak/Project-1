@@ -21,9 +21,11 @@ let projectilesArrayPlayer1 = [];
 // This array will hold the projectiles for Player 2
 let projectilesArrayPlayer2 = [];
 
+// These vairables will hold the scores of each respective player
 let player1Score = 0;
 let player2Score = 0;
 
+// Getting elements on HTML page
 let player_1_Score = document.getElementById('player1ScoreHere');
 let player_2_Score = document.getElementById('player2ScoreHere');
 let bitcoinP1 = document.getElementById('bitcoinP1');
@@ -152,7 +154,8 @@ function updateProjectiles(){
     // hitDetectionPeople();
     hitDetectionAsteroids();
 
-    let stopGame = checkForWinner();
+    let stopGame = checkForWinnerAsteroids();
+    // let stopGame = checkForWinnerPeople();
     
     if(stopGame === true){
         clearInterval(stop);
@@ -301,7 +304,7 @@ function hitDetectionAsteroids() {
 // ========================================================================================
 // This function will check for the winner of the game once all asteroids are destroyed
 // ========================================================================================
-function checkForWinner() {
+function checkForWinnerAsteroids() {
     let winningModal = document.getElementById('winningModal');
     let winningModalContent = document.getElementById('winningModalContent');
 
@@ -309,6 +312,38 @@ function checkForWinner() {
     let totalScore = player1Score + player2Score;
 
     if(totalScore === 32){
+        if( player1Score === player2Score){
+            gameOver = true;
+            winningModalContent.innerHTML = "TIE!";
+            winningModal.style.display = "block";
+            return gameOver;
+        } else if (player1Score > player2Score){
+            gameOver = true;
+            winningModalContent.innerHTML = "SPACESHIP WINS!";
+            winningModal.style.display = "block";
+            return gameOver;
+        } else {
+            winningModalContent.innerHTML = "UFO WINS!";
+            winningModal.style.display = "block";
+            gameOver = true;
+            return gameOver;
+        }
+    }
+
+    return gameOver;
+}
+
+// ========================================================================================
+// This function will check for the winner of the game once all people are destroyed
+// ========================================================================================
+function checkForWinnerPeople() {
+    let winningModal = document.getElementById('winningModal');
+    let winningModalContent = document.getElementById('winningModalContent');
+
+    let gameOver = false;
+    let totalScore = player1Score + player2Score;
+
+    if(totalScore === 14){
         if( player1Score === player2Score){
             gameOver = true;
             winningModalContent.innerHTML = "TIE!";
