@@ -388,15 +388,20 @@ function checkForWinnerPeople() {
     return gameOver;
 }
 
-// ================================================================
-// These functions will play a laser sound when the players shoot
-// ================================================================
+// ===================================
+// These functions control audio 
+// ===================================
 function laserSound(){
     document.getElementById("laserSound").play();
 }
 function laserSound2(){
     document.getElementById("laserSound2").play();
 }
+function setHalfVolume() {
+    var myAudio = document.getElementById("background-music");  
+    myAudio.volume = 0.3; 
+}
+
 
 
 // function hitDetectionPeople(){
