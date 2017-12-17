@@ -172,7 +172,7 @@ button:hover {
    
 }
 
-.closeBtn:hover {
+#closeBtn:hover {
     color: rgb(0, 112, 153);
 }
 
