@@ -27,7 +27,7 @@
 
         <!-- Score Board -->
         <div id="player1ScoreContainer">Spaceship <div> <img id="bitcoinP1" class="bitcoin" src="assets/images/bitcoin.png" alt="bitcoin"><span id="player1ScoreHere">0</span></div> </div>
-        <div id="player2ScoreContainer">UFO <div> <img id="bitcoinP2" class="bitcoin" src="assets/images/bitcoin.png" alt="bitcoin"><span id="player2ScoreHere">0</span></div></div>
+        <div id="player2ScoreContainer"  style="display: none;">UFO <div> <img id="bitcoinP2" class="bitcoin" src="assets/images/bitcoin.png" alt="bitcoin"><span id="player2ScoreHere">0</span></div></div>
         
         <!-- Container to hold projectiles for Player 1 -->
         <div id="projectilesPlayer1"></div>
@@ -37,65 +37,96 @@
         
         <!-- Container to hold asteroids -->
         <div id="asteroidContainer">
-            <div class="asteroid" style="top: 50px; left: 150px;"></div>
-            <div class="asteroid" style="top: 150px; left: 150px;"></div>
-            <div class="asteroid" style="top: 250px; left: 150px;"></div>
-            <div class="asteroid" style="top: 350px; left: 150px;"></div>
+            <div class="asteroid" style="top: 100px; left: 150px;"></div>
+            <div class="asteroid" style="top: 200px; left: 150px;"></div>
+            <div class="asteroid" style="top: 300px; left: 150px;"></div>
+            <div class="asteroid" style="top: 400px; left: 150px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 300px;"></div>
-            <div class="asteroid" style="top: 150px; left: 300px;"></div>
-            <div class="asteroid" style="top: 250px; left: 300px;"></div>
-            <div class="asteroid" style="top: 350px; left: 300px;"></div>
+            <div class="asteroid" style="top: 100px; left: 300px;"></div>
+            <div class="asteroid" style="top: 200px; left: 300px;"></div>
+            <div class="asteroid" style="top: 300px; left: 300px;"></div>
+            <div class="asteroid" style="top: 400px; left: 300px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 450px;"></div>
-            <div class="asteroid" style="top: 150px; left: 450px;"></div>
-            <div class="asteroid" style="top: 250px; left: 450px;"></div>
-            <div class="asteroid" style="top: 350px; left: 450px;"></div>
+            <div class="asteroid" style="top: 100px; left: 450px;"></div>
+            <div class="asteroid" style="top: 200px; left: 450px;"></div>
+            <div class="asteroid" style="top: 300px; left: 450px;"></div>
+            <div class="asteroid" style="top: 400px; left: 450px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 600px;"></div>
-            <div class="asteroid" style="top: 150px; left: 600px;"></div>
-            <div class="asteroid" style="top: 250px; left: 600px;"></div>
-            <div class="asteroid" style="top: 350px; left: 600px;"></div>
+            <div class="asteroid" style="top: 100px; left: 600px;"></div>
+            <div class="asteroid" style="top: 200px; left: 600px;"></div>
+            <div class="asteroid" style="top: 300px; left: 600px;"></div>
+            <div class="asteroid" style="top: 400px; left: 600px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 750px;"></div>
-            <div class="asteroid" style="top: 150px; left: 750px;"></div>
-            <div class="asteroid" style="top: 250px; left: 750px;"></div>
-            <div class="asteroid" style="top: 350px; left: 750px;"></div>
+            <div class="asteroid" style="top: 100px; left: 750px;"></div>
+            <div class="asteroid" style="top: 200px; left: 750px;"></div>
+            <div class="asteroid" style="top: 300px; left: 750px;"></div>
+            <div class="asteroid" style="top: 400px; left: 750px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 900px;"></div>
-            <div class="asteroid" style="top: 150px; left: 900px;"></div>
-            <div class="asteroid" style="top: 250px; left: 900px;"></div>
-            <div class="asteroid" style="top: 350px; left: 900px;"></div>
+            <div class="asteroid" style="top: 100px; left: 900px;"></div>
+            <div class="asteroid" style="top: 200px; left: 900px;"></div>
+            <div class="asteroid" style="top: 300px; left: 900px;"></div>
+            <div class="asteroid" style="top: 400px; left: 900px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 1050px;"></div>
-            <div class="asteroid" style="top: 150px; left: 1050px;"></div>
-            <div class="asteroid" style="top: 250px; left: 1050px;"></div>
-            <div class="asteroid" style="top: 350px; left: 1050px;"></div>
+            <div class="asteroid" style="top: 100px; left: 1050px;"></div>
+            <div class="asteroid" style="top: 200px; left: 1050px;"></div>
+            <div class="asteroid" style="top: 300px; left: 1050px;"></div>
+            <div class="asteroid" style="top: 400px; left: 1050px;"></div>
 
-            <div class="asteroid" style="top: 50px; left: 1200px;"></div>
-            <div class="asteroid" style="top: 150px; left: 1200px;"></div>
-            <div class="asteroid" style="top: 250px; left: 1200px;"></div>
-            <div class="asteroid" style="top: 350px; left: 1200px;"></div>
+            <div class="asteroid" style="top: 100px; left: 1200px;"></div>
+            <div class="asteroid" style="top: 200px; left: 1200px;"></div>
+            <div class="asteroid" style="top: 300px; left: 1200px;"></div>
+            <div class="asteroid" style="top: 400px; left: 1200px;"></div>
         </div>
         
         <!-- Reset Game -->
         <input type="button" value="Restart" onClick="document.location.reload(true)">
+        <!-- Instructions  -->
+        <div id="instructions">
+            <button id="modalBtn">Instructions</button>
+        </div>
 
         <!-- Winning Text Modal -->
         <div id="winningModal">
             <div class="winning" id="winningModalContent"></div>
         </div>
 
-    </div>
+
+        <!-- Modal for Instructions -->
+        <div id="instructionsModal" class="modal">
+            <div class="modalContent">
+                <span id="closeBtn">&times;</span>    
+                <h1><span class="yellow">Objective:</span> Destroy all asteroids to collect as many Bitcoins as possible</h1>
+                <div class="left">
+                    <h2>Spaceship Controls</h2>
+                    <p>Up: <span class="lime">W</span> <br>
+                        Left: <span class="lime">A</span> <br> 
+                        Down: <span class="lime">S</span> <br>
+                        Right: <span class="lime">D</span> <br>
+                        Shoot: <span class="lime">G</span> 
+                    </p>
+                </div>
+                <div class="right">
+                    <h2>UFO Controls</h2>
+                    <p> Up: <span class="blue">Up Arrow</span> <br>
+                        Down: <span class="blue">Down Arrow</span> <br>
+                        Left: <span class="blue">Left Arrow</span> <br>
+                        Right: <span class="blue">Right Arrow</span> <br>
+                        Shoot: <span class="blue">L</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End of Container Div -->
 
   
     <!-- Sound Byte for Laser Sound -->
     <audio id="laserSound" src="assets/audio/laserSound.wav"></audio>
 
-    <!-- Background Music
+    <!-- Background Music -->
     <audio id="background-music" autoplay loop onloadeddata="setHalfVolume()">
             <source src="assets/audio/background-music.mp3" type="audio/mp3" />
-    </audio> -->
+    </audio> 
 
     <script src="assets/js/gameScript.js"></script>
 </body>

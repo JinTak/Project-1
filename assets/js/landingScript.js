@@ -27,3 +27,9 @@ window.addEventListener('click', function(e) {
     }
     
 })
+
+// This function controls the background audio volume
+function setHalfVolume() {
+    var myAudio = document.getElementById("background-music");  
+    myAudio.volume = 0.5; 
+}
