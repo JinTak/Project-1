@@ -24,6 +24,16 @@
 
 }
 
+/* Game Reset Styling */
+input {
+    height: 100px;
+    width: 100px;
+    background: lime;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+}
+
 /* Special Styling for Asteroids with Faces of People*/
 #asteroidContainer {
     height: 100vh;
