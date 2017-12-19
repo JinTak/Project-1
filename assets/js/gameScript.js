@@ -403,8 +403,9 @@ function setHalfVolume() {
 }
 
 
-
-
+// ========================================
+// This section controls modal behaviour 
+// ========================================
 // Get Modal Element
 let modal = document.getElementById('instructionsModal');
 
@@ -413,7 +414,6 @@ let modalButton = document.getElementById('modalBtn');
 
 // Get Modal Close Button
 let modalCloseButton = document.getElementById('closeBtn');
-
 
 // Show modal when 'Instructions' button is clicked
 modalButton.addEventListener('click', function() {
