@@ -47,7 +47,6 @@
     bottom: 0;
     position: absolute;
     background: url(../images/ufo.svg);
-    display: none;
 }
 
 /* Styling for Asteroids */
