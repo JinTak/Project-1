@@ -346,7 +346,7 @@ function checkForWinnerAsteroids() {
             winningModal.style.display = "block";
             return gameOver;
         } else {
-            winningModalContent.innerHTML = "ASTRONAUT WINS!";
+            winningModalContent.innerHTML = "UFO WINS!";
             winningModal.style.display = "block";
             gameOver = true;
             return gameOver;
@@ -378,7 +378,7 @@ function checkForWinnerPeople() {
             winningModal.style.display = "block";
             return gameOver;
         } else {
-            winningModalContent.innerHTML = "ASTRONAUT WINS!";
+            winningModalContent.innerHTML = "UFO WINS!";
             winningModal.style.display = "block";
             gameOver = true;
             return gameOver;
