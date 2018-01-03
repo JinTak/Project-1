@@ -25,6 +25,11 @@ let projectilesArrayPlayer2 = [];
 let player1Score = 0;
 let player2Score = 0;
 
+// Constructor function for asteroids
+function asteroid(){
+    
+}
+
 // Getting elements on HTML page
 let player_1_Score = document.getElementById('player1ScoreHere');
 let player_2_Score = document.getElementById('player2ScoreHere');
