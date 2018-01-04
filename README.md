@@ -31,7 +31,6 @@ Collision detection was the most difficult aspect of this game. I used a built i
 
 ### Unsolved Problems
 - Still need to give movement to asteroids. 
-- If players shoot too quickly, the game gets very laggy.
 
 
 [Wireframe](https://wireframepro.mockflow.com/view/Df2fb730c406af0ed6065636ccfa218b3)
